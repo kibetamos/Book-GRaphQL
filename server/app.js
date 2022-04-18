@@ -1,17 +1,18 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 
 const app = express();
 
 // connect to mlab database
 // make sure to replace my db string & creds with your own
-mongoose.connect('mongodb+srv://root:<password>@cluster0.vspq7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://newuser:root@cluster0.vspq7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 mongoose.connection.once('open', () => {
     console.log('conneted to database');
 });
+// newuser              -root
 
 
 // bind express with graphql
