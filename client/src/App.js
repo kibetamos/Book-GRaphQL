@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-
+import { version } from "graphql/index.mjs"; //
 // components
 import BookList from './components/BookList';
 
